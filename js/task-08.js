@@ -8,6 +8,7 @@ function submitFormHandler(event) {
 
   if (email.value.trim() === "" || password.value.trim() === "") {
     alert("Всі поля мають бути заповнені!!!");
+    return;
   }
   const objData = {
     email: email.value,
@@ -16,5 +17,5 @@ function submitFormHandler(event) {
 
   console.log(objData);
 
-  formRef.reset();
+  event.currentTarget.reset();
 }
